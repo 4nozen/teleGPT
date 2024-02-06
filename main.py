@@ -199,7 +199,7 @@ async def command_help(update: Update, context: CallbackContext):
     commands = [
         ("/reset", "Reset settings"),
         ("/clear", "Clean up chat history"),
-        ("/set", "Change settings"),
+#        ("/set", "Change settings"),
         ("/show", "Show session data and chat history"),
         ("/help", "Command list"),
     ]
@@ -214,7 +214,7 @@ def register_handlers(application):
             CommandHandler('start', command_start),
             CommandHandler('reset', command_reset),
             CommandHandler('clear', command_clear),
-            CommandHandler('set', command_set),
+#            CommandHandler('set', command_set),
             CommandHandler('show', command_show),
             CommandHandler('help', command_help)
         ],
