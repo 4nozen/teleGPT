@@ -85,7 +85,8 @@ async def handle_message(update: Update, context: CallbackContext, session_id):
 async def response_from_openai(model, messages, temperature, max_tokens):
     params = {'model': model, 'messages': messages, 'temperature': temperature}
     if model == "gpt-4-vision-preview": 
-        max_tokens = 4096
+#        max_tokens = 4096
+        max_tokens = 16096
     if max_tokens is not None: 
         params['max_tokens'] = max_tokens
     return openai.chat.completions.create(**params).choices[0].message.content
